@@ -15,11 +15,26 @@
                 </div>
                 <div class="simple-view row">
                     <div id="city" class="main-info col-md-6">
-                        <input id="CityInput" type="text" placeholder="Default">
+                        <input id="CityInput" type="text" placeholder="Lokalizacja">
                         <span class="changeButton">></span>
                     </div>
-                    <div id="Temperature" class="main-info col-md-3"></div>
-                    <div id="WeatherText" class="main-info col-md-3"></div>
+                    <div id="Temperature" class="data col-md-2"></div>
+                    <div id="WeatherText" class="data col-md-4"></div>
+                </div>
+                <div class="simple-view row">
+                    <div class="main-info col-md-6">
+                        <span>Temperatura odczuwalna</span>
+                    </div>
+                    <div id="realFeel" class="data col-md-6"></div>
+                </div>
+                <div class="simple-view wind row">
+                    <div class="main-info col-md-6">
+                        <span>Wiatr</span>
+                    </div>
+                    <div id="windSpeed" class="data col-md-2"></div>
+                    <div class="main-info col-md-4">
+                        <img id="windDirection" src="wind-arrow.svg" width="50px" height="50px" alt="wind" title="wind"/>
+                    </div>
                 </div>
             </div>
         </div>

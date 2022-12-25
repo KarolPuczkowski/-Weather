@@ -1,6 +1,9 @@
 function setValues(obj){
-    document.querySelector('#Temperature').innerHTML = obj[0].Temperature.Metric.Value.toString();
+    document.querySelector('#Temperature').innerHTML = obj[0].Temperature.Metric.Value.toString()+ ' ' +obj[0].Temperature.Metric.Unit.toString();
     document.querySelector('#WeatherText').innerHTML = obj[0].WeatherText.toString();
+    document.querySelector('#realFeel').innerHTML = obj[0].RealFeelTemperature.Metric.Value.toString()+ ' ' +obj[0].RealFeelTemperature.Metric.Unit.toString();
+    document.querySelector('#windSpeed').innerHTML = obj[0].Wind.Speed.Metric.Value.toString() + ' ' + obj[0].Wind.Speed.Metric.Unit.toString();
+    document.querySelector('#windDirection').style.transform = 'rotate('+ obj[0].Wind.Direction.Degrees.toString() +'deg)';
 }
 
 async function fetchLocation(cityText) {
@@ -408,6 +411,7 @@ cityInput.addEventListener('click', (event) => {
 cityInput.addEventListener('change', (event) => {
     console.log("change");
     changeButton.classList.add("hiden");
+    // fetchData();
     fetchLocation(cityInput.value).then(data => {
         fetchData(data[0].Key);
     });

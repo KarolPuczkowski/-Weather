@@ -100,3 +100,9 @@ input {
 #city{
     display: flex;
 }
+
+.data{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
